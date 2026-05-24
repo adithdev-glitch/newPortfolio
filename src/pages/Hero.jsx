@@ -7,7 +7,7 @@ import Blocks from "../component/Blocks.jsx";
 
 export default function Hero() {
   return (
-    <div className="min-h-screen overflow-hidden bg-[#f3f3f3] font-sans relative">
+    <div className="h-[100vh] overflow-hidden bg-[#f3f3f3] font-sans relative">
       
       {/* Grid Background */}
       <div
