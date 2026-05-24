@@ -1,10 +1,10 @@
 import React from 'react'
-import Hero from './pages/Hero'
-import About from './pages/About'
-import Skills from './pages/Skills'
-import Projects from './pages/Projects'
-import ExperienceEducation from './pages/Exp&Edu'
-import Contact from './pages/Contact'
+import Hero from './pages/Hero.jsx'
+import About from './pages/About..jsx'
+import Skills from './pages/Skills.jsx'
+import Projects from './pages/Projects.jsx'
+import ExperienceEducation from './pages/Exp&Edu.jsx'
+import Contact from './pages/Contact.jsx'
 
 const App = () => {
   return (

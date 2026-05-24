@@ -1,9 +1,9 @@
 import React from 'react';
-import Nav from '../component/Nav';
+import Nav from '../component/Nav.jsx';
 import { motion } from "framer-motion";
-import Content from '../component/Content';
-import HeroImg from '../component/HeroImg';
-import Blocks from '../component/Blocks';
+import Content from '../component/Content.jsx';
+import HeroImg from '../component/HeroImg.jsx';
+import Blocks from '../component/Blocks.jsx';
 
 export default function Hero() {
 return (
