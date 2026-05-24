@@ -70,13 +70,25 @@ const Nav = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="
-        absolute top-0 left-1/2 -translate-x-1/2
-        z-50 w-[95%] sm:w-[90%] max-w-5xl
+        absolute
+        top-0
+        left-1/2
+        -translate-x-1/2
+        z-50
+        w-[95%]
+        sm:w-[92%]
+        max-w-5xl
         mix-blend-difference
       "
     >
-      <div className="relative overflow-hidden px-6 sm:px-10 py-5">
-        
+      <div
+        className="
+          relative
+          overflow-hidden
+          px-4 sm:px-8 md:px-10
+          py-4 sm:py-5
+        "
+      >
         {/* Animated Line */}
         <div
           ref={lineRef}
@@ -84,21 +96,32 @@ const Nav = () => {
         />
 
         {/* Nav Items */}
-        <div className="relative flex items-center justify-center gap-8 sm:gap-20">
+        <div
+          className="
+          relative
+          flex
+          items-center
+          justify-center
+          gap-3 sm:gap-8 md:gap-16
+        "
+        >
           {navItems.map((item) => (
             <motion.button
               key={item.id}
               onClick={() => {
-                document
-                  .getElementById(item.id)
-                  ?.scrollIntoView({
-                    behavior: "smooth",
-                  });
+                document.getElementById(item.id)?.scrollIntoView({
+                  behavior: "smooth",
+                });
               }}
               className="
-                nav-item relative uppercase
-                font-black text-white
-                text-lg sm:text-2xl tracking-[0.15em]
+                nav-item
+                relative
+                uppercase
+                font-black
+                text-white
+                text-sm sm:text-lg md:text-2xl
+                tracking-[0.1em] sm:tracking-[0.15em]
+                whitespace-nowrap
               "
               whileHover={{
                 y: -4,
@@ -111,8 +134,11 @@ const Nav = () => {
               {/* Hover Glow */}
               <motion.div
                 className="
-                  absolute inset-0 blur-2xl
-                  bg-white/20 rounded-full
+                  absolute
+                  inset-0
+                  blur-2xl
+                  bg-white/20
+                  rounded-full
                   -z-10
                 "
                 initial={{
@@ -134,8 +160,11 @@ const Nav = () => {
               {/* Underline */}
               <motion.div
                 className="
-                  absolute left-0 -bottom-2
-                  h-[2px] bg-white
+                  absolute
+                  left-0
+                  -bottom-2
+                  h-[2px]
+                  bg-white
                 "
                 initial={{ width: 0 }}
                 whileHover={{
