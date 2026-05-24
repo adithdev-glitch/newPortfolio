@@ -25,12 +25,15 @@ const HeroImg = () => {
               transition: { duration: 0.4 },
             }}
             className="
-              w-[65vw]
-              sm:w-[42vw]
-              md:w-[420px]
+              w-[58vw]
+              sm:w-[36vw]
+              md:w-[380px]
+              lg:w-[400px]
               xl:w-[420px]
               max-w-[420px]
-              min-w-[240px]
+              min-w-[220px]
+              h-auto
+              object-contain
             "
             style={{
               filter: "contrast(1.2) saturate(1.3) hue-rotate(-8deg)",

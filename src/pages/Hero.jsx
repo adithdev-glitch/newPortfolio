@@ -82,7 +82,7 @@ export default function Hero() {
               z-10
               px-2
 
-              text-[clamp(70px,9vw,220px)]
+              text-[clamp(90px,10vw,220px)]
             "
           >
             Portfolio
@@ -109,8 +109,7 @@ export default function Hero() {
               font-black
               uppercase
               text-black
-
-              text-[clamp(45px,6vw,140px)]
+text-[clamp(70px,9vw,200px)]
             "
           >
             Visual
@@ -137,8 +136,7 @@ export default function Hero() {
               font-black
               uppercase
               text-black
-
-              text-[clamp(45px,6vw,140px)]
+text-[clamp(70px,9vw,200px)]
             "
           >
             Design
