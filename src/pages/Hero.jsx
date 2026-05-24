@@ -8,6 +8,7 @@ import Blocks from "../component/Blocks.jsx";
 export default function Hero() {
   return (
     <div className="min-h-screen overflow-hidden bg-[#f3f3f3] font-sans relative">
+      
       {/* Grid Background */}
       <div
         className="absolute inset-0 opacity-40"
@@ -22,38 +23,26 @@ export default function Hero() {
       <Nav />
 
       {/* Main Hero */}
-      <section
-        className="
-          relative
-          h-[100vh]
-          flex
-          items-center
-          justify-center
-          px-4
-          pt-24 sm:pt-32
-        "
-      >
+      <section className="relative h-[100vh] w-[100vw] flex items-center justify-center px-4 pt-28 sm:pt-36 overflow-hidden">
+        
         {/* Huge Background Text */}
         <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden">
           
-          {/* Animated Background Glow */}
+          {/* Animated Glow */}
           <motion.div
             initial={{ scale: 0.6, opacity: 0 }}
             animate={{ scale: 1.4, opacity: 0.18 }}
-            transition={{
-              duration: 2,
-              ease: "easeOut",
-            }}
+            transition={{ duration: 2, ease: "easeOut" }}
             className="
               absolute
               left-1/2
               top-1/2
               -translate-x-1/2
               -translate-y-1/2
-              w-[45vw]
-              h-[45vw]
-              max-w-[500px]
-              max-h-[500px]
+              w-[300px]
+              h-[300px]
+              sm:w-[500px]
+              sm:h-[500px]
               rounded-full
               bg-[#7ef1d4]
               blur-3xl
@@ -70,7 +59,7 @@ export default function Hero() {
             }}
             className="
               absolute
-              top-[12%]
+              top-[8%]
               inset-x-0
               flex
               justify-center
@@ -78,11 +67,16 @@ export default function Hero() {
               font-black
               uppercase
               text-black
-              leading-none
+              leading-[0.9]
               z-10
               px-2
 
-              text-[clamp(90px,10vw,220px)]
+              text-[48px]
+              sm:text-[90px]
+              md:text-[120px]
+              lg:text-[160px]
+              xl:text-[210px]
+              2xl:text-[240px]
             "
           >
             Portfolio
@@ -97,21 +91,26 @@ export default function Hero() {
               duration: 1.2,
               ease: "anticipate",
             }}
-            whileHover={{
-              scale: 1.08,
-              x: 20,
-            }}
+            whileHover={{ scale: 1.05, x: 10 }}
             className="
-              absolute
-              top-[32%] sm:top-[36%]
-              left-[2%]
-              leading-none
-              font-black
-              uppercase
-              text-black
-text-[clamp(70px,9vw,200px)]
-            "
-          >
+  absolute
+  top-[24%]
+  md:top-[28%]
+  lg:top-[32%]
+  xl:top-[35%]
+  left-[3%]
+  font-black
+  uppercase
+  text-black
+  leading-none
+  z-20
+
+  text-[40px]
+  sm:text-[52px]
+  md:text-[70px]
+  lg:text-[100px]
+  xl:text-[140px]
+">
             Visual
           </motion.h2>
 
@@ -124,20 +123,27 @@ text-[clamp(70px,9vw,200px)]
               duration: 1.2,
               ease: "anticipate",
             }}
-            whileHover={{
-              scale: 1.08,
-              x: -20,
-            }}
+            whileHover={{ scale: 1.05, x: -10 }}
             className="
-              absolute
-              top-[32%] sm:top-[36%]
-              right-[4%]
-              leading-none
-              font-black
-              uppercase
-              text-black
-text-[clamp(70px,9vw,200px)]
-            "
+            absolute
+            top-[24%]
+            md:top-[38%]
+            lg:top-[42%]
+            xl:top-[45%]
+            right-[3%]
+            font-black
+            uppercase
+            text-black
+            leading-none
+            text-right
+            z-20
+          
+            text-[40px]
+            sm:text-[52px]
+            md:text-[70px]
+            lg:text-[100px]
+            xl:text-[140px]
+          "
           >
             Design
           </motion.h2>
@@ -169,7 +175,7 @@ text-[clamp(70px,9vw,200px)]
         {/* Main Image */}
         <HeroImg />
 
-        {/* Red Content Section */}
+        {/* Content */}
         <Content />
       </section>
     </div>
