@@ -35,6 +35,7 @@ export default function Hero() {
       >
         {/* Huge Background Text */}
         <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden">
+          
           {/* Animated Background Glow */}
           <motion.div
             initial={{ scale: 0.6, opacity: 0 }}
@@ -49,8 +50,8 @@ export default function Hero() {
               top-1/2
               -translate-x-1/2
               -translate-y-1/2
-              w-[70vw]
-              h-[70vw]
+              w-[45vw]
+              h-[45vw]
               max-w-[500px]
               max-h-[500px]
               rounded-full
@@ -81,12 +82,7 @@ export default function Hero() {
               z-10
               px-2
 
-              text-[14vw]
-              sm:text-[100px]
-              md:text-[120px]
-              lg:text-[160px]
-              xl:text-[220px]
-              2xl:text-[260px]
+              text-[clamp(70px,9vw,220px)]
             "
           >
             Portfolio
@@ -107,17 +103,14 @@ export default function Hero() {
             }}
             className="
               absolute
-              top-[30%] sm:top-[35%]
+              top-[32%] sm:top-[36%]
               left-[2%]
               leading-none
               font-black
               uppercase
               text-black
 
-              text-[14vw]
-              sm:text-[90px]
-              md:text-[120px]
-              xl:text-[150px]
+              text-[clamp(45px,6vw,140px)]
             "
           >
             Visual
@@ -138,17 +131,14 @@ export default function Hero() {
             }}
             className="
               absolute
-              top-[30%] sm:top-[35%]
+              top-[32%] sm:top-[36%]
               right-[4%]
               leading-none
               font-black
               uppercase
               text-black
 
-              text-[14vw]
-              sm:text-[90px]
-              md:text-[120px]
-              xl:text-[150px]
+              text-[clamp(45px,6vw,140px)]
             "
           >
             Design
