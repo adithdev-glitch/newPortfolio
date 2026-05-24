@@ -5,4 +5,4 @@ import project_2 from './project-2.png';
 import project_3 from './chatapp.png';
 import trafic2 from './trafic2.png';
 
-export const assets = {me, cloud, project_1, project_2, project_3, traffic, trafic2};
+export const assets = {me, cloud, project_1, project_2, project_3, trafic2};
