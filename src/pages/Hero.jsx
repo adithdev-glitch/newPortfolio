@@ -29,14 +29,35 @@ return (
           className=" absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[#7ef1d4] blur-3xl"/>
         {/* Main Title */}
         <motion.h1
-          initial={{ opacity: 0, y: -200, scale: 0.7, rotateX: 90, }}
-          animate={{ opacity: 1, y: 0, scale: 1, rotateX: 0, }}
-          transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], }}
-          className=" absolute top-[9%] left-1/2 -translate-x-1/2 text-[100px] sm:text-[110px] md:text-[130px] xl:text-[240px]
-            leading-[0.8] font-black uppercase text-black text-center">
-
-          Portfolio
-        </motion.h1>
+  initial={{ opacity: 0, y: -200, scale: 0.7 }}
+  animate={{ opacity: 1, y: 0, scale: 1 }}
+  transition={{
+    duration: 1.5,
+    ease: [0.16, 1, 0.3, 1],
+  }}
+  className="
+    absolute
+    top-[10%]
+    inset-x-0
+    flex
+    justify-center
+    text-center
+    font-black
+    uppercase
+    text-black
+    leading-none
+    text-[52px]
+    sm:text-[80px]
+    md:text-[120px]
+    lg:text-[160px]
+    xl:text-[220px]
+    2xl:text-[260px]
+    px-2
+    z-10
+  "
+>
+  Portfolio
+</motion.h1>
           {/* Left Text */}
         <motion.h2
           initial={{ opacity: 0, x: -300, rotate: 20, }}
