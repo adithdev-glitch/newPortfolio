@@ -35,7 +35,7 @@ export default function About() {
     }
   };
   return (
-    <section className="w-full min-h-screen bg-[#ececec] flex items-center justify-center px-4 overflow-hidden">
+    <section className="w-full h-[100vh] bg-[#ececec] flex items-center justify-center px-4 overflow-hidden">
       <div className="relative w-full max-w-[1500px]">
 
         {/* Top Right Dot + Line */}

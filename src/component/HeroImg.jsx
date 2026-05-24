@@ -30,7 +30,7 @@ const HeroImg = () => {
               md:w-[380px]
               lg:w-[400px]
               xl:w-[420px]
-              max-w-[420px]
+              max-w-[400px]
               min-w-[220px]
               h-auto
               object-contain
