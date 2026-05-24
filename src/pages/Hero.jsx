@@ -25,7 +25,7 @@ export default function Hero() {
       <section
         className="
           relative
-          min-h-screen
+          h-[100vh]
           flex
           items-center
           justify-center
