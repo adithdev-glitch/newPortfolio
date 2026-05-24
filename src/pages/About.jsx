@@ -35,7 +35,7 @@ export default function About() {
     }
   };
   return (
-    <section className="w-full h-[100vh] bg-[#ececec] flex items-center justify-center px-4 overflow-hidden">
+    <section className="w-full min-h-screen bg-[#ececec] flex items-center justify-center px-4 overflow-hidden">
       <div className="relative w-full max-w-[1500px]">
 
         {/* Top Right Dot + Line */}
@@ -65,7 +65,7 @@ export default function About() {
       <div ref={addRef} className="relative overflow-hidden bg-[#86ffe8] border-[3px] border-dashed border-black px-6 md:px-10 py-3">
         <div className="paint absolute inset-0 bg-black origin-left" />
         <span className="relative font-black text-[50px] sm:text-[70px] md:text-[105px] leading-none tracking-[-4px]">
-          M E (A) R N
+          M E A R N
         </span>
       </div>
 
