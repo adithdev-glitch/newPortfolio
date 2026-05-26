@@ -7,8 +7,8 @@ import Blocks from "../component/Blocks.jsx";
 
 export default function Hero() {
   return (
-    <div className="h-[100vh] overflow-hidden bg-[#f3f3f3] font-sans relative">
-      
+    <div className="h-screen overflow-hidden bg-[#f3f3f3] font-sans relative">
+
       {/* Grid Background */}
       <div
         className="absolute inset-0 opacity-40"
@@ -23,11 +23,11 @@ export default function Hero() {
       <Nav />
 
       {/* Main Hero */}
-      <section className="relative h-[100vh] w-[100vw] flex items-center justify-center px-4 pt-28 sm:pt-36 overflow-hidden">
-        
+      <section className="relative h-screen w-full flex items-center justify-center px-4 pt-28 sm:pt-36 overflow-hidden">
+
         {/* Huge Background Text */}
         <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden">
-          
+
           {/* Animated Glow */}
           <motion.div
             initial={{ scale: 0.6, opacity: 0 }}
@@ -51,36 +51,37 @@ export default function Hero() {
 
           {/* Main Title */}
           <motion.h1
-            initial={{ opacity: 0, y: -200, scale: 0.7 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{
-              duration: 1.5,
-              ease: [0.16, 1, 0.3, 1],
-            }}
-            className="
-              absolute
-              top-[8%]
-              inset-x-0
-              flex
-              justify-center
-              text-center
-              font-black
-              uppercase
-              text-black
-              leading-[0.9]
-              z-10
-              px-2
+  initial={{ opacity: 0, y: -200, scale: 0.7 }}
+  animate={{ opacity: 1, y: 0, scale: 1 }}
+  transition={{
+    duration: 1.5,
+    ease: [0.16, 1, 0.3, 1],
+  }}
+  className="
+    absolute
+    top-[8%]
+    inset-x-0
+    flex
+    justify-center
+    text-center
+    font-black
+    uppercase
+    text-black
+    leading-[0.9]
+    z-10
+    px-2
+    whitespace-nowrap
 
-              text-[48px]
-              sm:text-[90px]
-              md:text-[120px]
-              lg:text-[160px]
-              xl:text-[210px]
-              2xl:text-[240px]
-            "
-          >
-            Portfolio
-          </motion.h1>
+    text-[48px]
+    sm:text-[90px]
+    md:text-[120px]
+    lg:text-[150px]
+    xl:text-[190px]
+    2xl:text-[220px]
+  "
+>
+  Portfolio
+</motion.h1>
 
           {/* Left Text */}
           <motion.h2
@@ -93,24 +94,25 @@ export default function Hero() {
             }}
             whileHover={{ scale: 1.05, x: 10 }}
             className="
-  absolute
-  top-[24%]
-  md:top-[28%]
-  lg:top-[32%]
-  xl:top-[35%]
-  left-[3%]
-  font-black
-  uppercase
-  text-black
-  leading-none
-  z-20
+              absolute
+              top-[24%]
+              md:top-[28%]
+              lg:top-[32%]
+              xl:top-[35%]
+              left-[3%]
+              font-black
+              uppercase
+              text-black
+              leading-none
+              z-20
 
-  text-[40px]
-  sm:text-[52px]
-  md:text-[70px]
-  lg:text-[100px]
-  xl:text-[140px]
-">
+              text-[40px]
+              sm:text-[52px]
+              md:text-[70px]
+              lg:text-[100px]
+              xl:text-[140px]
+            "
+          >
             Visual
           </motion.h2>
 
@@ -125,25 +127,25 @@ export default function Hero() {
             }}
             whileHover={{ scale: 1.05, x: -10 }}
             className="
-            absolute
-            top-[24%]
-            md:top-[38%]
-            lg:top-[42%]
-            xl:top-[45%]
-            right-[3%]
-            font-black
-            uppercase
-            text-black
-            leading-none
-            text-right
-            z-20
-          
-            text-[40px]
-            sm:text-[52px]
-            md:text-[70px]
-            lg:text-[100px]
-            xl:text-[140px]
-          "
+              absolute
+              top-[24%]
+              md:top-[38%]
+              lg:top-[42%]
+              xl:top-[45%]
+              right-[3%]
+              font-black
+              uppercase
+              text-black
+              leading-none
+              text-right
+              z-20
+
+              text-[40px]
+              sm:text-[52px]
+              md:text-[70px]
+              lg:text-[100px]
+              xl:text-[140px]
+            "
           >
             Design
           </motion.h2>
