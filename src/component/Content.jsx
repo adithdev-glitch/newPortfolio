@@ -13,8 +13,12 @@ const Content = () => {
       }}
       className="
         absolute
-        right-[4vw] sm:right-[5vw]
-        top-[64%] sm:top-[58%]
+        right-[4vw]
+        sm:right-[5vw]
+
+        top-[64%]
+        sm:top-[58%]
+
         z-40
       "
     >
@@ -22,9 +26,14 @@ const Content = () => {
       <div
         className="
           bg-[#ef1c25]
-          w-[38vw] sm:w-[210px]
+
+          w-[36vw]
+          sm:w-[200px]
+          md:w-[210px]
+
           max-w-[210px]
           min-w-[150px]
+
           border-[3px]
           border-black
           rounded-lg
@@ -35,10 +44,13 @@ const Content = () => {
         {/* Top Bar */}
         <div
           className="
-            h-7 sm:h-8
+            h-7
+            sm:h-8
+
             bg-white
             border-b-[3px]
             border-black
+
             flex
             justify-end
             items-center
@@ -55,7 +67,10 @@ const Content = () => {
           <h3
             className="
               text-white
-              text-sm sm:text-xl
+              text-sm
+              sm:text-lg
+              md:text-xl
+
               font-black
               uppercase
               leading-tight
@@ -71,7 +86,10 @@ const Content = () => {
               border-[3px]
               border-black
               bg-white
-              h-8 sm:h-10
+
+              h-8
+              sm:h-10
+
               flex
               items-center
               gap-[2px]
@@ -82,7 +100,16 @@ const Content = () => {
             {Array.from({ length: 8 }).map((_, i) => (
               <div
                 key={i}
-                className="h-4 sm:h-6 w-2 sm:w-3 bg-[#ef1c25] animate-pulse"
+                className="
+                  h-4
+                  sm:h-6
+
+                  w-2
+                  sm:w-3
+
+                  bg-[#ef1c25]
+                  animate-pulse
+                "
               />
             ))}
           </div>
@@ -94,9 +121,16 @@ const Content = () => {
               bg-white
               border-[3px]
               border-black
-              px-4 sm:px-6
+
+              px-4
+              sm:px-6
+
               py-1
-              text-lg sm:text-3xl
+
+              text-lg
+              sm:text-2xl
+              md:text-3xl
+
               font-black
               hover:scale-105
               transition-all

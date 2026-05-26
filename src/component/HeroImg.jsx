@@ -5,8 +5,9 @@ import { assets } from "../assests/assest.js";
 const HeroImg = () => {
   return (
     <>
-      <div className="relative z-30 flex justify-center items-center">
-        <div className="relative">
+      <div className="relative z-30 flex justify-center items-center w-full">
+        <div className="relative flex justify-center items-center">
+
           {/* Hero Image */}
           <motion.img
             src={assets.me}
@@ -26,12 +27,15 @@ const HeroImg = () => {
             }}
             className="
               w-[58vw]
-              sm:w-[36vw]
-              md:w-[380px]
-              lg:w-[400px]
-              xl:w-[420px]
-              max-w-[400px]
+              sm:w-[34vw]
+              md:w-[360px]
+              lg:w-[390px]
+              xl:w-[410px]
+              2xl:w-[430px]
+
+              max-w-[430px]
               min-w-[220px]
+
               h-auto
               object-contain
             "
@@ -51,11 +55,17 @@ const HeroImg = () => {
             }}
             className="
               absolute
-              top-[2%] sm:top-[8%]
-              right-[-8vw] sm:right-[-80px]
+              top-[4%]
+              sm:top-[8%]
+
+              right-[-10vw]
+              sm:right-[-70px]
+              md:right-[-80px]
+
               z-40
             "
           >
+
             {/* Cloud Image */}
             <motion.img
               src={assets.cloud}
@@ -67,10 +77,13 @@ const HeroImg = () => {
                 ease: "easeInOut",
               }}
               className="
-                w-[30vw]
-                sm:w-[220px]
+                w-[28vw]
+                sm:w-[180px]
+                md:w-[210px]
+
                 max-w-[220px]
                 min-w-[110px]
+
                 object-contain
                 drop-shadow-[6px_6px_0px_rgba(0,0,0,1)]
               "
@@ -85,10 +98,15 @@ const HeroImg = () => {
                 items-center
                 justify-center
                 gap-[2px]
+
                 text-black
-                text-xs sm:text-2xl
+                text-xs
+                sm:text-xl
+                md:text-2xl
+
                 -rotate-6
                 pb-2
+
                 shadows-into-light-regular
                 animate-float
               "

@@ -72,12 +72,12 @@ const Nav = () => {
       className="
         absolute
         top-0
-        left-1/2
-        -translate-x-1/2
+        left-0
+        right-0
         z-50
-        w-[95%]
-        sm:w-[92%]
-        max-w-5xl
+        w-full
+        flex
+        justify-center
         mix-blend-difference
       "
     >
@@ -85,7 +85,9 @@ const Nav = () => {
         className="
           relative
           overflow-hidden
-          px-4 sm:px-8 md:px-10
+          w-full
+          max-w-5xl
+          px-4 sm:px-6 md:px-8
           py-4 sm:py-5
         "
       >
@@ -98,12 +100,15 @@ const Nav = () => {
         {/* Nav Items */}
         <div
           className="
-          relative
-          flex
-          items-center
-          justify-center
-          gap-3 sm:gap-8 md:gap-16
-        "
+            relative
+            flex
+            items-center
+            justify-center
+            gap-4
+            sm:gap-6
+            md:gap-10
+            lg:gap-16
+          "
         >
           {navItems.map((item) => (
             <motion.button
@@ -119,8 +124,12 @@ const Nav = () => {
                 uppercase
                 font-black
                 text-white
-                text-sm sm:text-lg md:text-2xl
-                tracking-[0.1em] sm:tracking-[0.15em]
+                text-sm
+                sm:text-base
+                md:text-xl
+                lg:text-2xl
+                tracking-[0.1em]
+                sm:tracking-[0.15em]
                 whitespace-nowrap
               "
               whileHover={{
