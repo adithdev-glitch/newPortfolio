@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
-    const rowsRef = useRef([]);
+  const rowsRef = useRef([]);
 
   useEffect(() => {
     rowsRef.current.forEach((el) => {
@@ -34,6 +34,7 @@ export default function About() {
       rowsRef.current.push(el);
     }
   };
+
   return (
     <section className="w-full min-h-screen bg-[#ececec] flex items-center justify-center px-4 overflow-hidden">
       <div className="relative w-full max-w-[1500px]">
@@ -54,51 +55,191 @@ export default function About() {
         <div className="flex flex-col items-center text-center leading-none">
 
           {/* Heading */}
-          <h1 className="font-black text-black text-[55px] sm:text-[75px] md:text-[110px] tracking-[-4px]">
+          <h1
+            className="
+              font-black
+              text-black
+
+              text-[42px]
+              sm:text-[65px]
+              md:text-[90px]
+              lg:text-[110px]
+
+              tracking-[-2px]
+              md:tracking-[-4px]
+            "
+          >
             I'm ADITH TP,
           </h1>
 
           {/* Highlight Row */}
           <div className="flex flex-wrap justify-center items-center mt-6 gap-2">
 
-      {/* Row 1 */}
-      <div ref={addRef} className="relative overflow-hidden bg-[#86ffe8] border-[3px] border-dashed border-black px-6 md:px-10 py-3">
-        <div className="paint absolute inset-0 bg-black origin-left" />
-        <span className="relative font-black text-[50px] sm:text-[70px] md:text-[105px] leading-none tracking-[-4px]">
-          M E (A) R N
-        </span>
-      </div>
+            {/* Row 1 */}
+            <div
+              ref={addRef}
+              className="
+                relative
+                overflow-hidden
+                bg-[#86ffe8]
+                border-[3px]
+                border-dashed
+                border-black
 
-      {/* Row 2 */}
-      <div ref={addRef} className="relative overflow-hidden border-[3px] border-dashed border-black px-6 md:px-10 py-3">
-        <div className="paint absolute inset-0 bg-black origin-left" />
-        <span className="relative font-black text-[50px] sm:text-[70px] md:text-[105px] leading-none tracking-[-4px]">
-          DEVELOPER
-        </span>
-      </div>
+                px-4
+                sm:px-6
+                md:px-10
 
-      {/* Row 3 */}
-      <div ref={addRef} className="relative overflow-hidden bg-[#86ffe8] border-[3px] border-dashed border-black px-6 md:px-10 py-3">
-        <div className="paint absolute inset-0 bg-black origin-left" />
-        <span className="relative font-black text-[50px] sm:text-[70px] md:text-[105px] leading-none tracking-[-4px]">
-          STACK
-        </span>
-      </div>
+                py-3
+              "
+            >
+              <div className="paint absolute inset-0 bg-black origin-left" />
 
-    </div>
+              <span
+                className="
+                  relative
+                  font-black
+
+                  text-[36px]
+                  sm:text-[55px]
+                  md:text-[80px]
+                  lg:text-[105px]
+
+                  leading-none
+
+                  tracking-[-2px]
+                  md:tracking-[-4px]
+                "
+              >
+                M E (A) R N
+              </span>
+            </div>
+
+            {/* Row 2 */}
+            <div
+              ref={addRef}
+              className="
+                relative
+                overflow-hidden
+                border-[3px]
+                border-dashed
+                border-black
+
+                px-4
+                sm:px-6
+                md:px-10
+
+                py-3
+              "
+            >
+              <div className="paint absolute inset-0 bg-black origin-left" />
+
+              <span
+                className="
+                  relative
+                  font-black
+
+                  text-[36px]
+                  sm:text-[55px]
+                  md:text-[80px]
+                  lg:text-[105px]
+
+                  leading-none
+
+                  tracking-[-2px]
+                  md:tracking-[-4px]
+                "
+              >
+                DEVELOPER
+              </span>
+            </div>
+
+            {/* Row 3 */}
+            <div
+              ref={addRef}
+              className="
+                relative
+                overflow-hidden
+                bg-[#86ffe8]
+                border-[3px]
+                border-dashed
+                border-black
+
+                px-4
+                sm:px-6
+                md:px-10
+
+                py-3
+              "
+            >
+              <div className="paint absolute inset-0 bg-black origin-left" />
+
+              <span
+                className="
+                  relative
+                  font-black
+
+                  text-[36px]
+                  sm:text-[55px]
+                  md:text-[80px]
+                  lg:text-[105px]
+
+                  leading-none
+
+                  tracking-[-2px]
+                  md:tracking-[-4px]
+                "
+              >
+                STACK
+              </span>
+            </div>
+          </div>
 
           {/* Bottom Text */}
           <div className="mt-6 relative">
-            <h2 className="font-black text-black text-[50px] sm:text-[70px] md:text-[105px] leading-[0.95] tracking-[-4px]">
-            I turn ideas into products
-            <br />
-            through development,
-            <br />
-            interaction and innovation.
+            <h2
+              className="
+                font-black
+                text-black
+
+                text-[34px]
+                sm:text-[50px]
+                md:text-[75px]
+                lg:text-[105px]
+
+                leading-[0.95]
+
+                tracking-[-2px]
+                md:tracking-[-4px]
+              "
+            >
+              I turn ideas into products
+              <br />
+              through development,
+              <br />
+              interaction and innovation.
             </h2>
 
             {/* Red Star */}
-            <div className="absolute bottom-[-10px] right-[-60px] text-red-600 text-[70px] rotate-12">
+            <div
+              className="
+                absolute
+
+                bottom-[-10px]
+
+                right-[-20px]
+                sm:right-[-40px]
+                md:right-[-60px]
+
+                text-red-600
+
+                text-[40px]
+                sm:text-[55px]
+                md:text-[70px]
+
+                rotate-12
+              "
+            >
               ✦
             </div>
           </div>
