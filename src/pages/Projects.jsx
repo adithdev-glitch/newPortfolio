@@ -2,89 +2,174 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { assets } from "../assests/assest.js";
+import { FaGithub, FaExternalLinkAlt, FaArrowRight, FaCode, FaCheckCircle } from "react-icons/fa";
+import { HiOutlineSparkles } from "react-icons/hi2";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
+    id: "01",
+    tag: "Education Tech",
     title: "E-Learning Platform",
+    subtitle: "Plan and launch interactive online courses",
     description:
-      "A MERN-based e-learning platform designed to make online learning seamless and engaging. It features secure authentication, dynamic course management, interactive lectures, and smooth payment integration. With an intuitive interface and responsive design, Eonix empowers learners to access quality education anytime, anywhere.",
+      "A complete MERN-based e-learning platform with secure authentication, interactive video lectures, dynamic course progress tracking, and seamless payment integration. Designed to empower students and instructors alike.",
     image: assets.project_1,
     tech: ["React", "Node.js", "MongoDB", "Express", "JWT"],
     link: "https://github.com/adithdev-glitch/E-LearningApp",
+    live: "https://github.com/adithdev-glitch/E-LearningApp",
+    theme: {
+      cardBg: "#f3e8ff",          // soft lavender
+      titleColor: "#2e1065",      // deep purple
+      subtitleColor: "#7e22ce",   // vibrant purple
+      descColor: "#581c87",       // muted purple
+      btnBg: "#9333ea",           // purple button
+      btnHover: "#7e22ce",
+      btnText: "#ffffff",
+      pillBg: "#ffffff",
+      pillText: "#6b21a8",
+      watermarkColor: "text-purple-300/40",
+      accentCircle: "#e9d5ff",
+      badge1: { text: "Interactive Courses", bg: "#f97316", textCol: "#ffffff" },
+      badge2: { text: "Verified Certificates", bg: "#ea580c", textCol: "#ffffff" },
+    },
   },
   {
+    id: "02",
+    tag: "Modern Commerce",
     title: "E-Commerce Platform",
+    subtitle: "Modern shopping with seamless checkout",
     description:
-      "U-Fashion is a modern e-commerce platform built with the MERN stack, featuring secure payment integration for a seamless checkout experience. Users can browse products, add items to the cart, and complete purchases with confidence, while the platform ensures smooth, reliable transactions and a polished shopping interface.",
+      "U-Fashion is a full-stack e-commerce marketplace featuring instant product catalog search, cloud media uploads, integrated payment checkout, and an intuitive customer shopping cart designed for maximum conversion.",
     image: assets.project_2,
-    tech: [
-      "React",
-      "Node.js",
-      "MongoDB",
-      "Express",
-      "Cloudinary",
-      "JWT",
-      "OAuth",
-    ],
+    tech: ["React", "Node.js", "MongoDB", "Express", "Cloudinary", "JWT"],
     link: "https://github.com/adithdev-glitch/e-commerce",
+    live: "https://github.com/adithdev-glitch/e-commerce",
+    theme: {
+      cardBg: "#e6f9f3",          // soft mint
+      titleColor: "#064e3b",      // deep emerald
+      subtitleColor: "#059669",   // vibrant emerald
+      descColor: "#065f46",       // muted emerald
+      btnBg: "#059669",           // emerald button
+      btnHover: "#047857",
+      btnText: "#ffffff",
+      pillBg: "#ffffff",
+      pillText: "#065f46",
+      watermarkColor: "text-emerald-300/40",
+      accentCircle: "#a7f3d0",
+      badge1: { text: "Live Cart Sync", bg: "#0d9488", textCol: "#ffffff" },
+      badge2: { text: "Instant Checkout", bg: "#0f766e", textCol: "#ffffff" },
+    },
   },
   {
-    title: "HeyChat",
+    id: "03",
+    tag: "Real-Time Chat",
+    title: "HeyChat Messenger",
+    subtitle: "Instant messaging & media sharing platform",
     description:
-      "A full-stack real-time chat application built using the MERN stack that allows users to communicate instantly through text messages and image sharing. The application features secure user authentication, real-time messaging using Socket.IO, online user status, media upload support, responsive chat UI, and cloud-based image storage.",
+      "A high-speed communication application powered by Socket.IO. Features instant bi-directional messaging, live user presence tracking, media uploads via Cloudinary, and responsive messaging layouts across all devices.",
     image: assets.project_3,
-    tech: [
-      "React",
-      "Node.js",
-      "MongoDB",
-      "Express",
-      "Cloudinary",
-      "Socket.IO",
-      "JWT",
-    ],
+    tech: ["React", "Node.js", "MongoDB", "Express", "Socket.IO", "Cloudinary"],
     link: "https://github.com/adithdev-glitch/chatApp",
+    live: "https://github.com/adithdev-glitch/chatApp",
+    theme: {
+      cardBg: "#ffedd5",          // soft warm peach
+      titleColor: "#7c2d12",      // deep warm coral
+      subtitleColor: "#ea580c",   // vibrant coral
+      descColor: "#9a3412",       // muted coral
+      btnBg: "#ea580c",           // coral button
+      btnHover: "#c2410c",
+      btnText: "#ffffff",
+      pillBg: "#ffffff",
+      pillText: "#9a3412",
+      watermarkColor: "text-orange-300/40",
+      accentCircle: "#fed7aa",
+      badge1: { text: "Socket.IO Realtime", bg: "#e11d48", textCol: "#ffffff" },
+      badge2: { text: "Cloud Media Delivery", bg: "#be123c", textCol: "#ffffff" },
+    },
   },
 ];
 
 export default function Projects() {
   const containerRef = useRef(null);
-  const cardsRef = useRef([]);
+  const cardRefs = useRef([]);
+  const badgeRefs = useRef([]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      cardsRef.current.forEach((card, i) => {
-        let fromProps = {};
+      // Hardware-accelerated GSAP Timeline:
+      // Initial positions: Card 0 in place, Card 1 & 2 start below (yPercent: 110)
+      gsap.set(cardRefs.current[0], { yPercent: 0, scale: 1, opacity: 1 });
+      gsap.set(cardRefs.current[1], { yPercent: 115, scale: 1, opacity: 1 });
+      gsap.set(cardRefs.current[2], { yPercent: 115, scale: 1, opacity: 1 });
 
-        if (i === 0)
-          fromProps = { x: -200, rotation: -5, opacity: 0 };
-
-        if (i === 1)
-          fromProps = { y: 200, opacity: 0 };
-
-        if (i === 2)
-          fromProps = { x: 200, rotation: 5, opacity: 0 };
-
-        gsap.fromTo(
-          card,
-          fromProps,
-          {
-            x: 0,
-            y: 0,
-            rotation: 0,
-            opacity: 1,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-              trigger: card,
-              start: "top 80%",
-              end: "bottom 60%",
-              toggleActions: "play reverse play reverse",
-            },
-          }
-        );
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top top",
+          end: "+=2200",
+          pin: true,
+          scrub: 0.6,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        },
       });
+
+      // Phase 1: Card 0 stays pinned while user scrolls into the section (dwell)
+      tl.to({}, { duration: 0.2 });
+
+      // Phase 2: Card 1 comes from bottom into the exact same position over Card 0
+      tl.to(
+        cardRefs.current[0],
+        {
+          scale: 0.93,
+          opacity: 0.5,
+          duration: 0.8,
+          ease: "power2.inOut",
+        },
+        "step1"
+      );
+
+      tl.to(
+        cardRefs.current[1],
+        {
+          yPercent: 0,
+          duration: 0.8,
+          ease: "power2.inOut",
+        },
+        "step1"
+      );
+
+      // Phase 3: Card 1 stays pinned while user views it (dwell)
+      tl.to({}, { duration: 0.3 });
+
+      // Phase 4: Card 2 comes from bottom into the exact same position over Card 1
+      tl.to(
+        cardRefs.current[1],
+        {
+          scale: 0.93,
+          opacity: 0.5,
+          duration: 0.8,
+          ease: "power2.inOut",
+        },
+        "step2"
+      );
+
+      tl.to(
+        cardRefs.current[2],
+        {
+          yPercent: 0,
+          duration: 0.8,
+          ease: "power2.inOut",
+        },
+        "step2"
+      );
+
+      // Phase 5: Settle on Card 2 before unpinning
+      tl.to({}, { duration: 0.2 });
+
+      ScrollTrigger.refresh();
     }, containerRef);
 
     return () => ctx.revert();
@@ -94,144 +179,404 @@ export default function Projects() {
     <section
       ref={containerRef}
       className="
-        min-h-screen
-        bg-white
-
+        relative
+        w-full
+        h-screen
+        bg-[#f8f9fa]
+        text-black
+        flex
+        flex-col
+        justify-between
         px-4
         sm:px-6
-        md:px-14
+        md:px-12
         lg:px-20
-        xl:px-28
-
-        py-20
-        md:py-32
-
-        overflow-hidden
+        py-6
+        sm:py-8
+        box-border
       "
     >
-      <h1
-        className="
-          text-3xl
-          sm:text-4xl
-          md:text-5xl
-          lg:text-6xl
+      {/* Background Accent Grid */}
+      <div
+        className="absolute inset-0 opacity-40 pointer-events-none"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, #e2e8f0 1px, transparent 1px), linear-gradient(to bottom, #e2e8f0 1px, transparent 1px)",
+          backgroundSize: "64px 64px",
+        }}
+      />
 
-          sekuya-regular
-          mb-12
-          text-black
-        "
-      >
-        Featured Projects
-      </h1>
+      {/* Header Bar */}
+      <div className="relative z-20 max-w-5xl w-full mx-auto flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#7ef1d4] ring-4 ring-[#7ef1d4]/30 animate-pulse" />
+          <h2 className="text-2xl sm:text-3xl md:text-4xl sekuya-regular text-black tracking-tight">
+            Featured Projects
+          </h2>
+        </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
+        <div className="flex items-center gap-2 bg-white px-3 py-1.5 rounded-full shadow-xs border border-black/5">
+          <span className="text-xs font-mono font-bold uppercase text-black/70">
+            Selected Works // 2024 — 2025
+          </span>
+        </div>
+      </div>
+
+      {/* Pinned Card Stage: All cards share the exact same bounds */}
+      <div className="relative z-10 max-w-5xl w-full mx-auto my-auto h-[500px] sm:h-[540px] md:h-[570px] lg:h-[590px]">
         {projects.map((project, i) => (
           <div
-            key={project.title}
-            ref={(el) => (cardsRef.current[i] = el)}
+            key={project.id}
+            ref={(el) => (cardRefs.current[i] = el)}
+            style={{
+              backgroundColor: project.theme.cardBg,
+              zIndex: i + 10,
+              transformOrigin: "center center",
+            }}
             className="
+              absolute
+              inset-0
+              w-full
+              h-full
+              rounded-3xl
+              md:rounded-[36px]
+              shadow-[0_-15px_35px_rgba(0,0,0,0.06),0_25px_60px_-15px_rgba(0,0,0,0.12)]
               border
-              border-black/10
-              rounded-xl
+              border-black/5
               overflow-hidden
-              shadow
-              hover:shadow-lg
-              transition
-              cursor-pointer
-              bg-white
+              will-change-transform
             "
           >
-            <div
-              className="
-                w-full
-                h-52
-                sm:h-56
-                md:h-52
-                lg:h-56
-
-                overflow-hidden
-              "
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="
-                  w-full
-                  h-full
-                  object-cover
-                  transition
-                  duration-500
-                "
-              />
-            </div>
-
-            <div className="p-4 sm:p-5 md:p-6">
-              <h3
-                className="
-                  text-lg
-                  sm:text-xl
-
-                  font-semibold
-                  mb-3
-                  leading-tight
-                "
+            <div className="relative w-full h-full p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-center">
+              {/* Giant Background Number Watermark */}
+              <span
+                className={`
+                  absolute
+                  right-6
+                  top-4
+                  md:right-10
+                  md:top-6
+                  text-8xl
+                  sm:text-9xl
+                  md:text-[170px]
+                  font-black
+                  leading-none
+                  pointer-events-none
+                  select-none
+                  z-0
+                  ${project.theme.watermarkColor}
+                `}
               >
-                {project.title}
-              </h3>
+                {project.id}
+              </span>
 
-              <p
-                className="
-                  text-gray-600
-                  mb-4
+              {/* Card Content Grid */}
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center h-full">
+                {/* Left Column: Info & Details */}
+                <div className="lg:col-span-6 flex flex-col justify-center">
+                  {/* Category Pill */}
+                  <div className="mb-2.5">
+                    <span
+                      style={{
+                        backgroundColor: project.theme.pillBg,
+                        color: project.theme.pillText,
+                      }}
+                      className="
+                        inline-flex
+                        items-center
+                        gap-1.5
+                        px-3.5
+                        py-1
+                        rounded-full
+                        text-xs
+                        font-bold
+                        shadow-xs
+                        border
+                        border-black/5
+                      "
+                    >
+                      <HiOutlineSparkles className="text-sm" />
+                      {project.tag}
+                    </span>
+                  </div>
 
-                  text-sm
-                  sm:text-[15px]
+                  {/* Title */}
+                  <h3
+                    style={{ color: project.theme.titleColor }}
+                    className="
+                      text-2xl
+                      sm:text-3xl
+                      md:text-4xl
+                      font-black
+                      tracking-tight
+                      leading-[1.15]
+                      mb-1.5
+                    "
+                  >
+                    {project.title}
+                  </h3>
 
-                  leading-relaxed
-                "
-              >
-                {project.description}
-              </p>
+                  {/* Subtitle */}
+                  <h4
+                    style={{ color: project.theme.subtitleColor }}
+                    className="
+                      text-sm
+                      sm:text-base
+                      font-semibold
+                      mb-2.5
+                      leading-snug
+                    "
+                  >
+                    {project.subtitle}
+                  </h4>
 
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.tech.map((t) => (
-                  <span
-                    key={t}
+                  {/* Description */}
+                  <p
+                    style={{ color: project.theme.descColor }}
                     className="
                       text-xs
                       sm:text-sm
-
-                      border
-                      border-black/20
-
-                      px-3
-                      py-1
-
-                      rounded-full
+                      md:text-[13.5px]
+                      leading-relaxed
+                      opacity-90
+                      mb-4
+                      line-clamp-4
+                      sm:line-clamp-none
                     "
                   >
-                    {t}
-                  </span>
-                ))}
-              </div>
+                    {project.description}
+                  </p>
 
-              <a
-                href={project.link}
-                className="
-                  text-sm
-                  font-medium
-                  border-b
-                  border-black
-                  pb-1
-                  hover:opacity-60
-                  transition
-                "
-              >
-                View Project →
-              </a>
+                  {/* Tech stack badges */}
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-5">
+                    {project.tech.map((t) => (
+                      <span
+                        key={t}
+                        className="
+                          text-[11px]
+                          sm:text-xs
+                          font-semibold
+                          px-2.5
+                          py-1
+                          rounded-lg
+                          bg-white/80
+                          text-black/80
+                          border
+                          border-black/5
+                          shadow-2xs
+                        "
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="flex flex-wrap items-center gap-3">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        backgroundColor: project.theme.btnBg,
+                        color: project.theme.btnText,
+                      }}
+                      className="
+                        group
+                        inline-flex
+                        items-center
+                        gap-2
+                        px-5
+                        py-2.5
+                        rounded-xl
+                        font-semibold
+                        text-xs
+                        sm:text-sm
+                        shadow-md
+                        transition-all
+                        duration-200
+                        hover:scale-[1.03]
+                        active:scale-[0.98]
+                      "
+                    >
+                      <FaGithub className="text-sm sm:text-base" />
+                      <span>View Project</span>
+                      <FaArrowRight className="text-[10px] sm:text-xs transition-transform group-hover:translate-x-1" />
+                    </a>
+
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="
+                          inline-flex
+                          items-center
+                          gap-1.5
+                          px-4
+                          py-2.5
+                          rounded-xl
+                          bg-white/80
+                          hover:bg-white
+                          text-black/80
+                          hover:text-black
+                          font-semibold
+                          text-xs
+                          sm:text-sm
+                          border
+                          border-black/10
+                          shadow-2xs
+                          transition-all
+                          duration-200
+                        "
+                      >
+                        <FaCode className="text-xs" />
+                        <span>Source Code</span>
+                        <FaExternalLinkAlt className="text-[9px] opacity-70" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+
+                {/* Right Column: Device Frame Mockup + Floating Action Badges */}
+                <div className="lg:col-span-6 relative flex items-center justify-center">
+                  {/* Decorative soft pastel circle backdrop */}
+                  <div
+                    style={{ backgroundColor: project.theme.accentCircle }}
+                    className="
+                      absolute
+                      w-52
+                      h-52
+                      sm:w-72
+                      sm:h-72
+                      rounded-full
+                      opacity-60
+                      blur-2xl
+                      -z-10
+                    "
+                  />
+
+                  {/* Device White Container Frame */}
+                  <div
+                    className="
+                      relative
+                      w-full
+                      max-w-sm
+                      sm:max-w-md
+                      lg:max-w-lg
+                      bg-white
+                      p-2.5
+                      sm:p-3.5
+                      rounded-2xl
+                      sm:rounded-[28px]
+                      shadow-xl
+                      border
+                      border-white/80
+                    "
+                  >
+                    {/* Device Screen Viewport */}
+                    <div
+                      className="
+                        relative
+                        w-full
+                        h-44
+                        sm:h-56
+                        md:h-64
+                        rounded-xl
+                        sm:rounded-[20px]
+                        overflow-hidden
+                        bg-gray-100
+                      "
+                    >
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="
+                          w-full
+                          h-full
+                          object-cover
+                        "
+                      />
+
+                      {/* Subtle Glass Gradient Shine */}
+                      <div className="absolute inset-0 bg-gradient-to-tr from-black/15 via-transparent to-white/10 pointer-events-none" />
+                    </div>
+
+                    {/* Floating Action Badge 1 (Top Right) */}
+                    <div
+                      style={{
+                        backgroundColor: project.theme.badge1.bg,
+                        color: project.theme.badge1.textCol,
+                      }}
+                      className="
+                        absolute
+                        -top-3
+                        -right-3
+                        sm:-top-4
+                        sm:-right-4
+                        z-20
+                        flex
+                        items-center
+                        gap-1.5
+                        px-3
+                        py-1.5
+                        rounded-xl
+                        shadow-lg
+                        text-[11px]
+                        sm:text-xs
+                        font-bold
+                        tracking-wide
+                        animate-float
+                      "
+                    >
+                      <HiOutlineSparkles className="text-xs sm:text-sm" />
+                      <span>{project.theme.badge1.text}</span>
+                    </div>
+
+                    {/* Floating Action Badge 2 (Bottom Right) */}
+                    <div
+                      style={{
+                        backgroundColor: project.theme.badge2.bg,
+                        color: project.theme.badge2.textCol,
+                      }}
+                      className="
+                        absolute
+                        -bottom-3
+                        -right-2
+                        sm:-bottom-4
+                        sm:-right-3
+                        z-20
+                        flex
+                        items-center
+                        gap-1.5
+                        px-3
+                        py-1.5
+                        rounded-xl
+                        shadow-lg
+                        text-[11px]
+                        sm:text-xs
+                        font-bold
+                        tracking-wide
+                      "
+                    >
+                      <FaCheckCircle className="text-xs sm:text-sm" />
+                      <span>{project.theme.badge2.text}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Bottom Scroll Hint */}
+      <div className="relative z-20 max-w-5xl w-full mx-auto flex items-center justify-between text-xs font-mono text-gray-500">
+        <span className="flex items-center gap-1.5">
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-black/40" />
+          Scroll down to reveal each project
+        </span>
+        <span>03 Featured Projects</span>
       </div>
     </section>
   );
