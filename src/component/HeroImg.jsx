@@ -5,8 +5,8 @@ import { assets } from "../assests/assest.js";
 const HeroImg = () => {
   return (
     <>
-      <div className="relative z-30 flex justify-center items-center w-full">
-        <div className="relative flex justify-center items-center">
+      <div className="relative z-30 flex justify-center items-center w-full pointer-events-none">
+        <div className="relative flex justify-center items-center pointer-events-auto">
 
           {/* Hero Image */}
           <motion.img

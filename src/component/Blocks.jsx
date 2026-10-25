@@ -34,7 +34,7 @@ const Blocks = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{
           duration: 0.8,
-          delay: 3,
+          delay: 1.2,
           ease: [0.22, 1, 0.36, 1],
         }}
         className="
@@ -55,7 +55,8 @@ const Blocks = () => {
           min-h-[70px]
 
           bg-[#7ef1d4]
-          z-10
+          z-40
+          pointer-events-auto
 
           flex
           items-center
@@ -66,7 +67,9 @@ const Blocks = () => {
       >
         <a
           href="/ADITH_TP.pdf"
-          download
+          download="ADITH_TP.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="
             bg-[#ef1c25]
             text-white
@@ -95,6 +98,10 @@ const Blocks = () => {
             hover:translate-x-[2px]
             hover:translate-y-[2px]
             hover:shadow-none
+
+            cursor-pointer
+            relative
+            z-50
 
             transition-all
             duration-200
