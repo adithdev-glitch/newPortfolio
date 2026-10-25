@@ -29,15 +29,11 @@ const skills = [
     items: [
       "Git",
       "GitHub",
-      "Postman",
-      "Thunder Client",
-      "VS Code",
       "JWT",
       "OAuth",
       "RESTful APIs",
       "Cloudinary",
-      "Vercel",
-      "Render",
+      "Deployment",
     ],
   },
   {
@@ -92,7 +88,7 @@ export default function Skills() {
       ref={sectionRef}
       className="relative w-screen h-screen bg-[#ECE9DB] text-white overflow-hidden"
     >
-        <FloatingIcon />
+      <FloatingIcon />
       {/* HORIZONTAL TRACK */}
       <div
         ref={trackRef}
@@ -104,7 +100,7 @@ export default function Skills() {
             className="w-screen h-full flex items-center px-8 md:px-32"
           >
             <div className="max-w-xl">
-              
+
 
               {/* TITLE */}
               <h1 className="text-5xl md:text-6xl text-black black-ops-one-regular mt-3 mb-8">
