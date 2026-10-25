@@ -92,7 +92,7 @@ export default function Skills() {
     <div ref={containerRef} className="relative w-full overflow-hidden">
       <section
         ref={sectionRef}
-        className="relative w-screen h-screen bg-[#ECE9DB] text-white overflow-hidden"
+        className="relative w-full h-[100dvh] min-h-[580px] bg-[#ECE9DB] text-white overflow-hidden"
       >
         <FloatingIcon />
       {/* HORIZONTAL TRACK */}
@@ -103,23 +103,22 @@ export default function Skills() {
         {skills.map((skill) => (
           <div
             key={skill.title}
-            className="w-screen h-full flex items-center px-8 md:px-32"
+            className="w-screen max-w-full h-full flex items-center px-6 sm:px-12 md:px-24 lg:px-32 flex-shrink-0"
           >
-            <div className="max-w-xl">
-
+            <div className="max-w-xl w-full">
 
               {/* TITLE */}
-              <h1 className="text-5xl md:text-6xl text-black black-ops-one-regular mt-3 mb-8">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-black black-ops-one-regular mt-2 mb-6 sm:mb-8">
                 {skill.title}
               </h1>
 
               {/* ITEMS */}
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2.5 sm:gap-3">
                 {skill.items.map((item) => (
                   <span
                     key={item}
-                    className="px-4 py-2 text-[#3B2F2F] border border-black/20 rounded-full text-sm
-                    hover:bg-black hover:text-white transition"
+                    className="px-3.5 sm:px-4 py-1.5 sm:py-2 text-[#3B2F2F] border border-black/20 rounded-full text-xs sm:text-sm
+                    hover:bg-black hover:text-white transition cursor-default"
                   >
                     {item}
                   </span>

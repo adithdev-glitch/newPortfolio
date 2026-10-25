@@ -42,8 +42,8 @@ export default function About() {
   };
 
   return (
-    <section className="w-full min-h-screen bg-[#ececec] flex items-center justify-center px-4 overflow-hidden">
-      <div className="relative w-full max-w-[1500px]">
+    <section className="w-full min-h-screen bg-[#ececec] flex items-center justify-center px-4 py-16 sm:py-20 overflow-hidden">
+      <div className="relative w-full max-w-[1300px]">
 
         {/* Top Right Dot + Line */}
         <div className="absolute right-0 top-[20px] hidden md:flex flex-col items-center">
@@ -65,14 +65,9 @@ export default function About() {
             className="
               font-black
               text-black
-
-              text-[42px]
-              sm:text-[65px]
-              md:text-[90px]
-              lg:text-[110px]
-
-              tracking-[-2px]
-              md:tracking-[-4px]
+              text-[clamp(36px,6.5vw,84px)]
+              tracking-tight
+              md:tracking-[-3px]
             "
           >
             I'm ADITH TP,
@@ -91,12 +86,11 @@ export default function About() {
                 border-[3px]
                 border-dashed
                 border-black
-
                 px-4
                 sm:px-6
-                md:px-10
-
-                py-3
+                md:px-8
+                py-2
+                md:py-2.5
               "
             >
               <div className="paint absolute inset-0 bg-black origin-left" />
@@ -105,16 +99,9 @@ export default function About() {
                 className="
                   relative
                   font-black
-
-                  text-[36px]
-                  sm:text-[55px]
-                  md:text-[80px]
-                  lg:text-[105px]
-
+                  text-[clamp(24px,4.5vw,64px)]
                   leading-none
-
-                  tracking-[-2px]
-                  md:tracking-[-4px]
+                  tracking-tight
                 "
               >
                 M E (A) R N
@@ -130,12 +117,11 @@ export default function About() {
                 border-[3px]
                 border-dashed
                 border-black
-
                 px-4
                 sm:px-6
-                md:px-10
-
-                py-3
+                md:px-8
+                py-2
+                md:py-2.5
               "
             >
               <div className="paint absolute inset-0 bg-black origin-left" />
@@ -144,16 +130,9 @@ export default function About() {
                 className="
                   relative
                   font-black
-
-                  text-[36px]
-                  sm:text-[55px]
-                  md:text-[80px]
-                  lg:text-[105px]
-
+                  text-[clamp(24px,4.5vw,64px)]
                   leading-none
-
-                  tracking-[-2px]
-                  md:tracking-[-4px]
+                  tracking-tight
                 "
               >
                 DEVELOPER
@@ -170,12 +149,11 @@ export default function About() {
                 border-[3px]
                 border-dashed
                 border-black
-
                 px-4
                 sm:px-6
-                md:px-10
-
-                py-3
+                md:px-8
+                py-2
+                md:py-2.5
               "
             >
               <div className="paint absolute inset-0 bg-black origin-left" />
@@ -184,16 +162,9 @@ export default function About() {
                 className="
                   relative
                   font-black
-
-                  text-[36px]
-                  sm:text-[55px]
-                  md:text-[80px]
-                  lg:text-[105px]
-
+                  text-[clamp(24px,4.5vw,64px)]
                   leading-none
-
-                  tracking-[-2px]
-                  md:tracking-[-4px]
+                  tracking-tight
                 "
               >
                 STACK
@@ -207,16 +178,10 @@ export default function About() {
               className="
                 font-black
                 text-black
-
-                text-[34px]
-                sm:text-[50px]
-                md:text-[75px]
-                lg:text-[105px]
-
-                leading-[0.95]
-
-                tracking-[-2px]
-                md:tracking-[-4px]
+                text-[clamp(26px,4.5vw,64px)]
+                leading-[1.05]
+                tracking-tight
+                md:tracking-[-2px]
               "
             >
               I turn ideas into products

@@ -50,9 +50,9 @@ const education = [
 
 export default function ExperienceEducation() {
   return (
-    <section className="w-full min-h-screen bg-[#ECE9DB] px-4 sm:px-6 md:px-10 lg:px-20 py-10 overflow-hidden">
+    <section className="w-full min-h-screen bg-[#ECE9DB] px-4 sm:px-6 md:px-10 lg:px-16 py-12 sm:py-16 md:py-20 overflow-hidden">
 
-      <div className="max-w-[1450px] mx-auto flex flex-col lg:flex-row gap-8 items-start">
+      <div className="max-w-[1350px] mx-auto flex flex-col lg:flex-row gap-8 items-start">
 
         {/* LEFT SIDE */}
         <motion.div
@@ -65,7 +65,8 @@ export default function ExperienceEducation() {
             lg:w-[68%]
 
             bg-[#ECECEC]
-            border-[4px]
+            border-[3.5px]
+            sm:border-[4px]
             border-black
             rounded-[24px]
 
@@ -80,11 +81,10 @@ export default function ExperienceEducation() {
             className="
               text-2xl
               sm:text-3xl
-              md:text-5xl
-
+              md:text-4xl
               font-black
               uppercase
-              mb-7
+              mb-6
               tracking-tight
             "
           >
@@ -197,7 +197,8 @@ export default function ExperienceEducation() {
             lg:w-[32%]
 
             bg-[#ECECEC]
-            border-[4px]
+            border-[3.5px]
+            sm:border-[4px]
             border-black
             rounded-[24px]
 
@@ -212,11 +213,10 @@ export default function ExperienceEducation() {
             className="
               text-2xl
               sm:text-3xl
-              md:text-5xl
-
+              md:text-4xl
               font-black
               uppercase
-              mb-7
+              mb-6
               tracking-tight
             "
           >

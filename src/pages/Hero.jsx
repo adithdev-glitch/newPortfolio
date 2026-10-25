@@ -7,7 +7,7 @@ import Blocks from "../component/Blocks.jsx";
 
 export default function Hero() {
   return (
-    <div className="h-screen overflow-hidden bg-[#f3f3f3] font-sans relative">
+    <div className="h-[100dvh] min-h-[580px] max-h-[1080px] overflow-hidden bg-[#f3f3f3] font-sans relative">
 
       {/* Grid Background */}
       <div
@@ -23,7 +23,7 @@ export default function Hero() {
       <Nav />
 
       {/* Main Hero */}
-      <section className="relative h-screen w-full flex items-center justify-center px-4 pt-28 sm:pt-36 overflow-hidden">
+      <section className="relative h-full w-full flex items-center justify-center px-4 pt-20 sm:pt-28 overflow-hidden">
 
         {/* Huge Background Text */}
         <div className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden">
@@ -39,10 +39,10 @@ export default function Hero() {
               top-1/2
               -translate-x-1/2
               -translate-y-1/2
-              w-[300px]
-              h-[300px]
-              sm:w-[500px]
-              sm:h-[500px]
+              w-[260px]
+              h-[260px]
+              sm:w-[420px]
+              sm:h-[420px]
               rounded-full
               bg-[#7ef1d4]
               blur-3xl
@@ -71,13 +71,8 @@ export default function Hero() {
     z-10
     px-2
     whitespace-nowrap
-
-    text-[48px]
-    sm:text-[90px]
-    md:text-[120px]
-    lg:text-[150px]
-    xl:text-[190px]
-    2xl:text-[220px]
+    text-[clamp(48px,11vw,160px)]
+    2xl:text-[180px]
   "
 >
   Portfolio
@@ -97,20 +92,16 @@ export default function Hero() {
               absolute
               top-[24%]
               md:top-[28%]
-              lg:top-[32%]
-              xl:top-[35%]
+              lg:top-[30%]
+              xl:top-[33%]
               left-[3%]
               font-black
               uppercase
               text-black
               leading-none
               z-20
-
-              text-[40px]
-              sm:text-[52px]
-              md:text-[70px]
-              lg:text-[100px]
-              xl:text-[140px]
+              text-[clamp(34px,7vw,95px)]
+              2xl:text-[110px]
             "
           >
             Visual
@@ -129,9 +120,9 @@ export default function Hero() {
             className="
               absolute
               top-[24%]
-              md:top-[38%]
-              lg:top-[42%]
-              xl:top-[45%]
+              md:top-[34%]
+              lg:top-[38%]
+              xl:top-[42%]
               right-[3%]
               font-black
               uppercase
@@ -139,12 +130,8 @@ export default function Hero() {
               leading-none
               text-right
               z-20
-
-              text-[40px]
-              sm:text-[52px]
-              md:text-[70px]
-              lg:text-[100px]
-              xl:text-[140px]
+              text-[clamp(34px,7vw,95px)]
+              2xl:text-[110px]
             "
           >
             Design

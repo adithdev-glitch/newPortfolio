@@ -28,14 +28,15 @@ const HeroImg = () => {
             className="
               w-[58vw]
               sm:w-[34vw]
-              md:w-[360px]
-              lg:w-[390px]
-              xl:w-[410px]
-              2xl:w-[430px]
+              md:w-[340px]
+              lg:w-[370px]
+              xl:w-[390px]
+              2xl:w-[420px]
 
-              max-w-[430px]
-              min-w-[220px]
+              max-w-[420px]
+              min-w-[200px]
 
+              max-h-[min(54vh,420px)]
               h-auto
               object-contain
             "
