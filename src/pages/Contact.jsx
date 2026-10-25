@@ -40,20 +40,15 @@ export default function Contact() {
       <div
         className="
           flex-1
-          w-full
-          max-w-6xl
-          mx-auto
           grid
           grid-cols-1
           md:grid-cols-2
           items-center
-          gap-10
-          md:gap-12
+          gap-12
           px-6
-          sm:px-10
-          md:px-12
+          md:px-24
           pt-20
-          pb-12
+          pb-10
         "
       >
 

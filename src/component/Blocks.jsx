@@ -76,13 +76,16 @@ const Blocks = () => {
             border-black
 
             px-3
-            sm:px-5
-            md:px-6
-            py-1.5
-            sm:py-2
-            text-xs
+            sm:px-6
+            lg:px-8
+
+            py-2
+
+            text-[10px]
             sm:text-sm
-            md:text-base
+            md:text-lg
+            lg:text-xl
+
             font-black
             uppercase
             whitespace-nowrap
