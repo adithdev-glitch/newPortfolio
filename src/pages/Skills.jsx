@@ -53,12 +53,15 @@ const skills = [
 ]
 
 export default function Skills() {
+  const containerRef = useRef(null)
   const sectionRef = useRef(null)
   const trackRef = useRef(null)
 
   useEffect(() => {
+    const container = containerRef.current
     const section = sectionRef.current
     const track = trackRef.current
+    if (!container || !section || !track) return
 
     const scrollLength = track.scrollWidth - window.innerWidth
 
@@ -78,17 +81,20 @@ export default function Skills() {
           })
         },
       })
-    }, section)
+    }, container)
 
-    return () => ctx.revert()
+    return () => {
+      ctx.revert()
+    }
   }, [])
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative w-screen h-screen bg-[#ECE9DB] text-white overflow-hidden"
-    >
-      <FloatingIcon />
+    <div ref={containerRef} className="relative w-full overflow-hidden">
+      <section
+        ref={sectionRef}
+        className="relative w-screen h-screen bg-[#ECE9DB] text-white overflow-hidden"
+      >
+        <FloatingIcon />
       {/* HORIZONTAL TRACK */}
       <div
         ref={trackRef}
@@ -124,5 +130,6 @@ export default function Skills() {
         ))}
       </div>
     </section>
+  </div>
   )
 }

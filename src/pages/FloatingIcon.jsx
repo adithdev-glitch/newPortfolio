@@ -64,25 +64,30 @@ export default function FloatingIcon() {
   const iconsRef = useRef([])
 
   useEffect(() => {
-    iconsRef.current.forEach((icon, i) => {
-      gsap.fromTo(
-        icon,
-        {
-          y: gsap.utils.random(-30, 30),
-          x: gsap.utils.random(-30, 30),
-        },
-        {
-          y: gsap.utils.random(-80, 80),
-          x: gsap.utils.random(-80, 80),
-          duration: gsap.utils.random(6, 12),
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-          delay: i * 0.3,
-        }
-      )
-    })
-  }, [])
+    const ctx = gsap.context(() => {
+      iconsRef.current.forEach((icon, i) => {
+        if (!icon) return;
+        gsap.fromTo(
+          icon,
+          {
+            y: gsap.utils.random(-30, 30),
+            x: gsap.utils.random(-30, 30),
+          },
+          {
+            y: gsap.utils.random(-80, 80),
+            x: gsap.utils.random(-80, 80),
+            duration: gsap.utils.random(6, 12),
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+            delay: i * 0.3,
+          }
+        );
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
 
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden">

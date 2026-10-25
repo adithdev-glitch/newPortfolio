@@ -9,24 +9,30 @@ export default function About() {
   const rowsRef = useRef([]);
 
   useEffect(() => {
-    rowsRef.current.forEach((el) => {
-      const overlay = el.querySelector(".paint");
+    const ctx = gsap.context(() => {
+      rowsRef.current.forEach((el) => {
+        if (!el) return;
+        const overlay = el.querySelector(".paint");
+        if (!overlay) return;
 
-      gsap.fromTo(
-        overlay,
-        { scaleX: 1 },
-        {
-          scaleX: 0,
-          transformOrigin: "left",
-          duration: 1.2,
-          ease: "power2.inOut",
-          scrollTrigger: {
-            trigger: el,
-            start: "top 80%",
-          },
-        }
-      );
+        gsap.fromTo(
+          overlay,
+          { scaleX: 1 },
+          {
+            scaleX: 0,
+            transformOrigin: "left",
+            duration: 1.2,
+            ease: "power2.inOut",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 80%",
+            },
+          }
+        );
+      });
     });
+
+    return () => ctx.revert();
   }, []);
 
   const addRef = (el) => {
